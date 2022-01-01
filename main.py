@@ -13,7 +13,7 @@ def hello_http(request):
     request_json = request.get_json(silent=True)
     request_args = request.args
 
-    Telegram_API_Key = environ['Telegram_API_Key']
+    # Telegram_API_Key = environ['Telegram_API_Key']
 
     if request_json and 'name' in request_json:
         name = request_json['name']
