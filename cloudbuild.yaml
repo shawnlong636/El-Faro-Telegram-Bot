@@ -11,9 +11,9 @@ steps:
   - --runtime=python39
 availableSecrets:
   secretManager:
-  - versionName: projects/el-faro-telegram-bot/secrets/Telegram_API_Key/versions/1
+  - versionName: projects/911288896089/secrets/Telegram_API_Key/versions/1
     env: 'Telegram_API_Key'
-  - versionName: projects/el-faro-telegram-bot/secrets/Telegram_API_Hash/versions/1
+  - versionName: projects/911288896089/secrets/Telegram_API_Hash/versions/1
     env: 'Telegram_API_Hash'
-  - versionName: projects/el-faro-telegram-bot/secrets/Telegram_API_ID/versions/1
+  - versionName: projects/911288896089/secrets/Telegram_API_ID/versions/1
     env: 'Telegram_API_ID'
