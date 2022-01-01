@@ -2,7 +2,7 @@
 .DS_Store
 
 # Environmental Variables
-.envrc
+.env
 
 # Python
 .Python
