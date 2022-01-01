@@ -9,6 +9,7 @@ steps:
   - --source=.
   - --trigger-http
   - --runtime=python39
+  secretEnv: ['Telegram_API_Key', 'Telegram_API_Hash', 'Telegram_API_ID']
 availableSecrets:
   secretManager:
   - versionName: projects/911288896089/secrets/Telegram_API_Key/versions/1
