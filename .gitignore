@@ -1,11 +1,10 @@
 # MacOS
 .DS_Store
 
-# Environmental Variables
-.env
-
 # Python
 .Python
 env/
 build/
 var/
+__pycache__
+.pytest_cache
