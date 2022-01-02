@@ -10,7 +10,6 @@ steps:
   - --source=.
   - --trigger-http
   - --runtime=python39
-  - 
   - >
     --set-secrets 
     'Telegram_API_Key=Telgram_API_Key:latest, 
