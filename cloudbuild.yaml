@@ -1,6 +1,5 @@
 steps:
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-  entrypoint: 'bash'
   args:
   - gcloud
   - functions
@@ -10,12 +9,8 @@ steps:
   - --source=.
   - --trigger-http
   - --runtime=python39
-  secretEnv: ['Telegram_API_Key', 'Telegram_API_Hash', 'Telegram_API_ID']
-availableSecrets:
-  secretManager:
-  - versionName: projects/911288896089/secrets/Telegram_API_Key
-    env: 'Telegram_API_Key'
-  - versionName: projects/911288896089/secrets/Telegram_API_Hash
-    env: 'Telegram_API_Hash'
-  - versionName: projects/911288896089/secrets/Telegram_API_ID
-    env: 'Telegram_API_ID'
+  - --set-secrets
+  - >
+    'Telegram_API_Key=Telgram_API_Key:latest, 
+    Telegram_API_Hash=Telegram_API_Hash:latest, 
+    Telegram_API_ID=Telegram_API_ID:latest'
