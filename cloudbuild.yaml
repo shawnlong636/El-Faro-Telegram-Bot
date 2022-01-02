@@ -10,8 +10,9 @@ steps:
   - --source=.
   - --trigger-http
   - --runtime=python39
-  - --set-secrets
+  - 
   - >
+    --set-secrets 
     'Telegram_API_Key=Telgram_API_Key:latest, 
     Telegram_API_Hash=Telegram_API_Hash:latest, 
     Telegram_API_ID=Telegram_API_ID:latest'
