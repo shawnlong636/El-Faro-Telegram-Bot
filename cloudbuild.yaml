@@ -2,6 +2,7 @@ steps:
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   args:
   - gcloud
+  - beta
   - functions
   - deploy
   - hello_http
