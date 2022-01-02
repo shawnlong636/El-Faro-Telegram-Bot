@@ -1,3 +1,4 @@
-flask
-pytest
 functions-framework
+mock
+pytest
+google-cloud-secret-manager

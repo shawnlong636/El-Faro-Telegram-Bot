@@ -1,1 +1,2 @@
 # Empty
+google-cloud-secret-manager
