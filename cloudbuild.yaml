@@ -1,10 +1,12 @@
 steps:
 - name: 'docker.io/library/python:3.9'
+  id: "Test"
   entrypoint: /bin/sh
   args:
   - -c
   - 'pip install -r requirements-test.txt && pytest'
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  id: "Deploy"
   args:
   - gcloud
   - beta
