@@ -11,7 +11,6 @@ def get_secrets() -> {str: str}:
             "Telegram_API_ID": None
             }
 
-    project_id = get_project_id()
     client = secretmanager.SecretManagerServiceClient()
     
     key_name = f"Telegram_API_Key:latest"
