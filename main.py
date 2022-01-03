@@ -12,10 +12,10 @@ def get_secrets() -> {str: str}:
             }
 
     client = secretmanager.SecretManagerServiceClient()
-    
-    key_name = f"Telegram_API_Key:latest"
-    # hash_name = f"projects/{project_id}/secrets/Telegram_API_Hash/versions/latest"
-    # id_name = key = f"projects/{project_id}/secrets/Telegram_API_ID/versions/latest"
+    project_id = "911288896089"
+    key_name = f"projects/{project_id}/secrets/Telegram_API_Hash/versions/latest"
+    hash_name = f"projects/{project_id}/secrets/Telegram_API_Hash/versions/latest"
+    id_name = key = f"projects/{project_id}/secrets/Telegram_API_ID/versions/latest"
     
     response = client.access_secret_version(name=key_name)
     secrets["Telegram_API_Key"] = response.payload.data.decode("UTF-8")
