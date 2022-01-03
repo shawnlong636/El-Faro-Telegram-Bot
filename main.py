@@ -22,6 +22,9 @@ def get_secrets() -> {str: str}:
     response = client.access_secret_version(name=id_name)
     secrets["Telegram_API_ID"] = response.payload.data.decode("UTF-8")
 
+    for key, val in secrets.items():
+        if val == None:
+            raise Exception("Value for {key} cannot be None")
     return secrets
 
 def hello_http(request):
