@@ -1,0 +1,6 @@
+steps:
+- name: 'docker.io/library/python:3.9'
+  entrypoint: /bin/sh
+  args:
+  - -c
+  - 'pip install -r requirements-test.txt && pytest'
