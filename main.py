@@ -2,6 +2,10 @@ from flask import escape
 from google.cloud import secretmanager
 
 def get_secrets() -> {str: str}:
+    """Function to retrieve secrets from Google Cloud Secret manager.
+    Returns:
+        String Dictionary containing all secrets needed for the application
+    """
     secrets = {"Telegram_API_Key": None,
             "Telegram_API_Hash": None,
             "Telegram_API_ID": None
@@ -25,10 +29,11 @@ def get_secrets() -> {str: str}:
     for key, val in secrets.items():
         if val == None:
             raise Exception("Value for {key} cannot be None")
+    
     return secrets
 
-def hello_http(request):
-    """HTTP Cloud Function.he
+def TelegramWebhook(request):
+    """HTTP Cloud Function to be called by Telegram Bot API.
     Args:
         request (flask.Request): The request object.
     Returns:
@@ -47,4 +52,5 @@ def hello_http(request):
         name = request_args['name']
     else:
         name = 'World'
+    
     return f'Hello there {escape(name)}!'
