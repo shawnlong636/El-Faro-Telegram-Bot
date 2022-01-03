@@ -5,3 +5,11 @@ steps:
   args:
   - -c
   - 'pip install -r requirements-test.txt && pytest'
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  id: "Deploy"
+  args:
+  - cloud-build-local
+  - --config=cloudbuild.yaml
+  - --dryrun=true
+  - --push=false
+  - .
