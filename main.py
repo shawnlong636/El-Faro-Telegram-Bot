@@ -1,9 +1,5 @@
 from flask import escape
-import functions_framework
-from os import environ
 from google.cloud import secretmanager
-from sys import platform
-import requests
 
 def get_secrets() -> {str: str}:
     secrets = {"Telegram_API_Key": None,
@@ -20,11 +16,11 @@ def get_secrets() -> {str: str}:
     response = client.access_secret_version(name=key_name)
     secrets["Telegram_API_Key"] = response.payload.data.decode("UTF-8")
 
-    # response = client.access_secret_version(name=hash_name)
-    # secrets["Telegram_API_Hash"] = response.payload.data.decode("UTF-8")
+    response = client.access_secret_version(name=hash_name)
+    secrets["Telegram_API_Hash"] = response.payload.data.decode("UTF-8")
 
-    # response = client.access_secret_version(name=id_name)
-    # secrets["Telegram_API_ID"] = response.payload.data.decode("UTF-8")
+    response = client.access_secret_version(name=id_name)
+    secrets["Telegram_API_ID"] = response.payload.data.decode("UTF-8")
 
     return secrets
 

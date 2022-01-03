@@ -2,4 +2,3 @@ functions-framework
 mock
 pytest
 google-cloud-secret-manager
-requests
