@@ -12,8 +12,9 @@ steps:
   - beta
   - functions
   - deploy
-  - hello_http
+  - TelegramWebhook
   - --region=us-central1
   - --source=.
   - --trigger-http
   - --runtime=python39
+  - --security-level=secure-always

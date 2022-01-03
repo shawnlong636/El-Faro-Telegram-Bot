@@ -7,4 +7,4 @@ def test_print_name():
     data = {'name': name}
     req = Mock(get_json=Mock(return_value=data), args=data)
 
-    assert main.hello_http(req) == f'Hello there {name}!'
+    assert main.TelegramWebhook(req) == f'Hello there {name}!'
